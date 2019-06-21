@@ -56,3 +56,5 @@ This logic could be extended by declaring a new variable with a value to allow f
 - ***Update HTTP Circuit Breaker Count:*** This Cache Attribute filter will use the Circuit Breaker name as the message key and update it with the most recent count, which was iterated in the last filter. This will also update the time to live within the Circuit Box and refresh the timer before it resets.
 
 - ***Mock Response and Reflect:*** This is where the routing failure message handler would be. In this case we just used a simple mockup set message and reflect, which shows the HTTP Code captured and the current Circuit Breaker Count. This will iterate until it reaches the limit set in the global policy. When this limit is hit, the global policy will open the Circuit and handle the fault there, rather than routing back to this policy.
+
+For questions or comments: dwille@axway.com
